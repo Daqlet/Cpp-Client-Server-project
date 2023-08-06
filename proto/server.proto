@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+//option java_multiple_files = true;
+//option java_package = "io.grpc.examples.helloworld";
+//option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package server;
+
+// The server definition.
+service Server {
+    // Empty request
+    rpc SayHello (HelloRequest) returns (google.protobuf.Empty) {}
+
+	// Sends x to print on console
+	rpc Print (PrintRequest) returns (google.protobuf.Empty) {}
+}
+
+// Empty request to print hello on console
+message HelloRequest {
+
+}
+
+// Print request to print x on console
+message PrintRequest {
+    string x = 1;
+}
