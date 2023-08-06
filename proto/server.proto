@@ -2,8 +2,6 @@ syntax = "proto3";
 
 import "google/protobuf/empty.proto";
 
-option objc_class_prefix = "HLW";
-
 package server;
 
 // The server definition.
